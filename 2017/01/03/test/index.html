@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>test | xie&#39;s blog</title>
+  <title>海林808温控器.usp | xie&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="只是测试下稳定性">
+  <meta name="description" content="##海林808MD温控器宏文件/*  SIMPL+ Module Information  (Fill in comments below)*//Dealer Name: 长沙豪门电子科技System Name: 海林808温控器模块System Number:Programmer: 谢龙Comments: 894654775
+/
+/*  Compiler Directives  (Uncomme">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
+<meta property="og:title" content="海林808温控器.usp">
 <meta property="og:url" content="http://blog.happylearneveryday.cn/2017/01/03/test/index.html">
 <meta property="og:site_name" content="xie's blog">
-<meta property="og:description" content="只是测试下稳定性">
-<meta property="og:updated_time" content="2017-01-03T05:43:26.685Z">
+<meta property="og:description" content="##海林808MD温控器宏文件/*  SIMPL+ Module Information  (Fill in comments below)*//Dealer Name: 长沙豪门电子科技System Name: 海林808温控器模块System Number:Programmer: 谢龙Comments: 894654775
+/
+/*  Compiler Directives  (Uncomme">
+<meta property="og:updated_time" content="2017-01-03T07:33:04.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="只是测试下稳定性">
+<meta name="twitter:title" content="海林808温控器.usp">
+<meta name="twitter:description" content="##海林808MD温控器宏文件/*  SIMPL+ Module Information  (Fill in comments below)*//Dealer Name: 长沙豪门电子科技System Name: 海林808温控器模块System Number:Programmer: 谢龙Comments: 894654775
+/
+/*  Compiler Directives  (Uncomme">
   
     <link rel="alternate" href="/atom.xml" title="xie&#39;s blog" type="application/atom+xml">
   
@@ -77,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      test
+      海林808温控器.usp
     </h1>
   
 
@@ -85,12 +91,82 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>只是测试下稳定性</p>
+        <p>##海林808MD温控器宏文件<br>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  SIMPL+ Module Information<br>  (Fill in comments below)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>/<em><br>Dealer Name: 长沙豪门电子科技<br>System Name: 海林808温控器模块<br>System Number:<br>Programmer: 谢龙<br>Comments: 894654775
+</em>/</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Compiler Directives<br>  (Uncomment and declare compiler directives as needed)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>// #ENABLE_DYNAMIC</p>
+<p>#SYMBOL_NAME “海林808温控器”</p>
+<p>#HINT “808”<br>// #DEFINE_CONSTANT<br>// #CATEGORY “”<br>// #PRINT_TO_TRACE<br>// #DIGITAL_EXPAND<br>// #ANALOG_SERIAL_EXPAND<br>// #OUTPUT_SHIFT<br>// #HELP_PDF_FILE “”</p>
+<p>#DEFAULT_VOLATILE</p>
+<p>#ENABLE_STACK_CHECKING</p>
+<p>#ENABLE_TRACE<br>// #ENCODING_ASCII<br>// #ENCODING_UTF16<br>// #ENCODING_INHERIT_FROM_PARENT<br>// #ENCODING_INHERIT_FROM_PROGRAM</p>
+<p>#HELP_BEGIN</p>
+<p>海林808温控器控制模块，包含面板id设定，开机，关机，温度调节，开关机状态反馈，设置温度反馈，当前室温反馈;<br>Inputs:<br>数字量TurnOn TurnOff为开关机。<br>数字量AcUp，AcDown对应调节温度加减，数字量_26Dge输入为一键设置为26度，主机上电AcDge默认在26度基础上进行增减，下次在这次基础上增减。<br>数字量OscillatorCheck为宏外部过来的Oscillator定时脉冲信号，最小得1.6秒一个周期，建议设置为hi_time 0.1s low_time 2s;<br>串行量StringIn为面板回码，此处用来显示开关机状态，室温和设置温度。</p>
+<p>Outputs:<br>模拟量输出AcDge为当前调节的温度，可以用于动态显示温度调节，一般和面板真实设置温度偏差不大；<br>模拟量输出IndoorTemp为当前面板读取到的室温;<br>模拟量输出SetTemp为读取的当前面板设置温度；<br>数字量AcStatus为输出当前开关机显示。<br>串行量StringOut为输出串码给面板；<br>串行量AcNow输出对应开机、关机和失去联系的ON、 Off、 Err字符串(30秒没有收到开机或关机回码时显示Err)。</p>
+<p>#HELP_END</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Include Libraries<br>  (Uncomment and include additional libraries as needed)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>// #CRESTRON_LIBRARY “”<br>// #USER_LIBRARY “”</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS<br>  (Uncomment and declare inputs and outputs as needed)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>DIGITAL_INPUT AcUp,AcDown,_26Dge,TurnOn,TurnOff,OscillatorCheck;<br>ANALOG_INPUT PanelId;<br>STRING_INPUT StringIn[30];<br>//BUFFER_INPUT StringFromHailin[30];</p>
+<p>DIGITAL_OUTPUT AcStatus;<br>ANALOG_OUTPUT AcDge,IndoorTemp,SetTemp;<br>STRING_OUTPUT StringOut,AcNow;<br>//analog_output buffer[30];</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  SOCKETS<br>  (Uncomment and define socket definitions as needed)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>// TCP_CLIENT<br>// TCP_SERVER<br>// UDP_SOCKET</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Parameters<br>  (Uncomment and declare parameters as needed)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>// INTEGER_PARAMETER<br>// SIGNED_INTEGER_PARAMETER<br>// LONG_INTEGER_PARAMETER<br>// SIGNED_LONG_INTEGER_PARAMETER<br>// STRING_PARAMETER</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Parameter Properties<br>  (Uncomment and declare parameter properties as needed)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>/*</p>
+<p>#BEGIN_PARAMETER_PROPERTIES parameter_variable, parameter_variable, …<br>   // propValidUnits = // unitString or unitDecimal|unitHex|unitPercent|unitCharacter|unitTime|unitTicks;<br>   // propDefaultUnit = // unitString, unitDecimal, unitHex, unitPercent, unitCharacter, unitTime or unitTicks;<br>   // propBounds = lower_bound , upper_bound;<br>   // propDefaultValue = ;  // or, propDefaultValue = “”;<br>   // propList = // { “value” , “label” } , { “value” , “label” } , … ;<br>   // propShortDescription = “status_bar_hint_text”;<br>   // #BEGIN_PROP_FULL_DESCRIPTION  line_1…  line_2…  line_n  #END_PROP_FULL_DESCRIPTION<br>   // #BEGIN_PROP_NOTES line_1…  line_2…  line_n  #END_PROP_NOTES</p>
+<p>#END_PARAMETER_PROPERTIES<br>*/</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Structure Definitions<br>  (Uncomment and define structure definitions as needed)<br>  Note:  Be sure to initialize all declared STRING variables as needed<br>         For example, in Function Main: struct.myString = “”;<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>/*<br>STRUCTURE MyStruct1<br>{<br>};</p>
+<p>MyStruct1 struct;<br>*/</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Global Variables<br>  (Uncomment and declare global variables as needed)<br>  Note:  Be sure to initialize all declared STRING variables as needed<br>         For example, in Function Main: myString = “”;<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>INTEGER AcInitial,AcTemp,i,temp[3];<br>// LONG_INTEGER<br>// SIGNED_INTEGER<br>// SIGNED_LONG_INTEGER<br>STRING StringTemp[30];</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Functions<br>  (Add any additional functions here)<br>  Note:  Functions must be physically placed before the location in<br>         the code that calls them.<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>/*<br>Function MyFunction1()<br>{<br>    // TODO:  Add local variable declarations here</p>
+<pre><code>// TODO:  Add code here
+</code></pre><p>}<br>*/</p>
+<p>/*<br>Integer_Function MyIntFunction1()<br>{<br>    // TODO:  Add local variable declarations here</p>
+<pre><code>// TODO:  Add code here
+
+Return (0);
+</code></pre><p>}<br>*/</p>
+<p>String_Function ProcessString(string StringA)<br>{<br>String StringB[30];<br>integer CRC, char, i, j, xflg;<br>CRC = 0xFFFF;<br>for(i=1 to len(StringA))<br>    {<br>    char = byte(StringA,i);<br>    for(j=1 to 8)<br>        {<br>            xflg = (CRC ^ char) &amp; 0x0001;<br>            CRC = (CRC &gt;&gt; 1);<br>            if(xflg &lt;&gt; 0)<br>            CRC = CRC ^ 0xA001;<br>            char = char &gt;&gt; 1;<br>        }<br>    }<br>StringB = StringA + chr(low(CRC)) + chr(high(CRC));<br>return (StringB);<br>}</p>
+<p>Integer_Function SetAcTemp(integer PanelNum,integer AcDgr)<br>{<br>    StringTemp = chr(PanelNum) + “\x06\x00\x01\x00” + chr(AcDgr);<br>    StringOut = ProcessString(StringTemp);<br>    Return (0);<br>}</p>
+<p>/*String_Function MyStrFunction1()<br>{<br>    // TODO:  Add local variable declarations here</p>
+<pre><code>// TODO:  Add code here
+
+Return (&quot;&quot;);
+</code></pre><p>}<br>*/</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Event Handlers<br>  (Uncomment and declare additional event handlers as needed)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/<br>PUSH TurnOff<br>{<br>StringTemp = chr(PanelId) + “\x06\x00\x00\x00\x00”;<br>StringOut = ProcessString(StringTemp);<br>}</p>
+<p>PUSH TurnOn<br>{<br>StringTemp = chr(PanelId) + “\x06\x00\x00\x00\x01”;<br>StringOut = ProcessString(StringTemp);<br>}</p>
+<p>PUSH _26Dge<br>{<br>AcTemp = 26;<br>AcDge = 26;<br>SetAcTemp(PanelId,AcDge);<br>}</p>
+<p>PUSH AcUp<br>{<br>if(AcTemp&lt;35)<br>    {<br>    AcTemp = AcTemp + 1;<br>    AcDge = AcTemp;<br>    }<br>SetAcTemp(PanelId,AcDge);<br>}</p>
+<p>PUSH AcDown<br>{<br>if(AcTemp&gt;5)<br>    {<br>    AcTemp = AcTemp - 1;<br>    AcDge = AcTemp;<br>    }<br>SetAcTemp(PanelId,AcDge);<br>}</p>
+<p>PUSH OscillatorCheck<br>{<br>wait(5)<br>{<br>for(i=1 to 3)<br>{<br>temp[i] =0;<br>}<br>temp[1] = 1;<br>if(temp[1]=1)<br>{<br>StringTemp = chr(PanelId) + “\x03\x00\x00\x00\x01”;<br>StringOut = ProcessString(StringTemp);<br>}<br>}<br>wait(50)<br>{<br>temp[1] = 0;<br>temp[2] = 1;<br>if(temp[2] = 1)<br>{<br>StringTemp = chr(PanelId) + “\x03\x00\x06\x00\x01”;<br>StringOut = ProcessString(StringTemp);<br>}<br>}<br>wait(100)<br>{<br>temp[2] = 0;<br>temp[3] = 1;<br>if(temp[3] = 1)<br>{<br>StringTemp = chr(PanelId) + “\x03\x00\x01\x00\x01”;<br>StringOut = ProcessString(StringTemp);<br>}<br>}<br>wait(150);<br>}</p>
+<p>change StringIn, PanelId<br>{<br>string StringOn[30],StringOff[30],StringTempOn[20],StringTempOff[20];<br>StringTempOn = chr(PanelId) + “\x03\x02\x00\x01”;<br>StringTempOff = chr(PanelId) + “\x03\x02\x00\x00”;<br>StringOn = ProcessString(StringTempOn);<br>StringOff = ProcessString(StringTempOff);<br>wait(400,wait1)<br>{<br>AcStatus = 0;<br>AcNow = “Err”;<br>}</p>
+<p>if(temp[1] = 1 &amp;&amp; StringIn = StringOn)<br>{<br>cancelwait(wait1);<br>AcStatus = 1;<br>AcNow = “On”;<br>}</p>
+<p>else if( temp[1] = 1 &amp;&amp; StringIn = StringOff)<br>{<br>cancelwait(wait1);<br>AcStatus = 0;<br>AcNow = “Off”;<br>}</p>
+<p>/<em>else<br>{<br>wait(3000,wait1)<br>{<br>AcStatus = 0;<br>AcNow = “Err”;<br>}<br>}</em>/</p>
+<p>if(temp[2]=1 &amp;&amp; len(StringIn)=7 &amp;&amp; byte(StringIn,1) = PanelId &amp;&amp; mid(StringIn,2,3)=”\x03\x02\x00”)<br>IndoorTemp = byte(StringIn,5);<br>if(temp[3]=1 &amp;&amp; len(StringIn)=7 &amp;&amp; byte(StringIn,1) = PanelId &amp;&amp; mid(StringIn,2,3)=”\x03\x02\x00”)<br>SetTemp = byte(StringIn,5);<br>}<br>/<em><br>RELEASE input<br>{<br>    // TODO:  Add code here<br>}
+</em>/</p>
+<p>/<em><br>CHANGE input<br>{<br>    // TODO:  Add code here<br>}
+</em>/</p>
+<p>/<em><br>EVENT<br>{<br>    // TODO:  Add code here<br>}
+</em>/</p>
+<p>/<em><br>SOCKETCONNECT<br>{<br>    // TODO:  Add code here<br>}
+</em>/</p>
+<p>/<em><br>SOCKETDISCONNECT<br>{<br>    // TODO:  Add code here<br>}
+</em>/</p>
+<p>/<em><br>SOCKETRECEIVE<br>{<br>    // TODO:  Add code here<br>}
+</em>/</p>
+<p>/<em><br>SOCKETSTATUS<br>{<br>    // TODO:  Add code here<br>}
+</em>/</p>
+<p>/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>  Main()<br>  Uncomment and place one-time startup code here<br>  (This code will get called when the system starts up)<br><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/</p>
+<p>Function Main()<br>{<br>AcInitial = 26;<br>AcTemp = AcInitial;<br>AcDge = AcInitial;<br>AcStatus = 0;<br>AcNow = “Off”;    // TODO:  Add code here<br>    // Initialize declared global and local variables/arrays as needed.</p>
+<pre><code>// WaitForInitializationComplete();
+// If you are reading any Input or Output variables, uncomment
+//   the WaitForInitializationComplete statement above and read
+//   them afterwards.  Input/Output variables will not have
+//   their correct values set until after the logic processor
+//   runs and propagates the values to them.
+</code></pre><p>}</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.happylearneveryday.cn/2017/01/03/test/" data-id="cixh71q8g0000zkvcd92043tw" class="article-share-link">Share</a>
+      <a data-url="http://blog.happylearneveryday.cn/2017/01/03/test/" data-id="cixh77cu80000iwvccu7ob2d5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,7 +205,7 @@
       <ul>
         
           <li>
-            <a href="/2017/01/03/test/">test</a>
+            <a href="/2017/01/03/test/">海林808温控器.usp</a>
           </li>
         
       </ul>
